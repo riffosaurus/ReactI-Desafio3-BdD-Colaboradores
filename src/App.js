@@ -14,13 +14,15 @@ function App() {
 
 //useState que me permita guardar la lista de colaboradores
 const [listaColaboradores, setListaColaboradores] = useState(BaseColaboradores);
+//useState para guardar el valor del input del buscador del navbar
+const [valorBuscador, setValorBuscador] = useState("");
 
 
   return (
     <div className="App">
-      <Navbar />
+      <Navbar valorBuscador={valorBuscador} setValorBuscador={setValorBuscador} listaColaboradores={listaColaboradores} setListaColaboradores={setListaColaboradores}/>
       <Main setListaColaboradores={setListaColaboradores} listaColaboradores={listaColaboradores}/>
-      <Listado listaColaboradores={listaColaboradores} />
+      <Listado listaColaboradores={listaColaboradores} valorBuscador={valorBuscador}/>
       
     </div>
   );
