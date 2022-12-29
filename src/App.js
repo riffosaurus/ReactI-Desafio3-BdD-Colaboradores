@@ -7,6 +7,8 @@ import Listado from './components/Listado';
 import Main from './components/Main';
 
 
+
+
 function App() {
 
 
@@ -19,6 +21,7 @@ const [colaboradores, setColaboradores] = useState(BaseColaboradores);
       <Navbar />
       <Main setColaboradores={setColaboradores} />
       <Listado BaseColaboradores={BaseColaboradores} />
+      
     </div>
   );
 }
