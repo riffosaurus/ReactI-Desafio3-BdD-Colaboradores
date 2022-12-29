@@ -13,14 +13,14 @@ function App() {
 
 
 //useState que me permita guardar la lista de colaboradores
-const [colaboradores, setColaboradores] = useState(BaseColaboradores);
+const [listaColaboradores, setListaColaboradores] = useState(BaseColaboradores);
 
 
   return (
     <div className="App">
       <Navbar />
-      <Main setColaboradores={setColaboradores} />
-      <Listado BaseColaboradores={BaseColaboradores} />
+      <Main setListaColaboradores={setListaColaboradores} listaColaboradores={listaColaboradores}/>
+      <Listado listaColaboradores={listaColaboradores} />
       
     </div>
   );
