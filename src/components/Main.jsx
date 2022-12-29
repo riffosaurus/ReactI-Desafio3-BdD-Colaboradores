@@ -18,6 +18,11 @@ const [emailColaborador, setEmailColaborador] = useState()
   const enviarFormulario = (e) => {
     //evita que se recargue la pagina
       e.preventDefault();
+      //condicion de que no existan espacios en blanco
+        if(nombreColaborador === '' || emailColaborador === '') {
+            alert('No se permiten campos vacios')
+        }
+        else {
       //agregamos nuevo colaborador al arreglo
       props.setListaColaboradores([...props.listaColaboradores, { nombre: nombreColaborador, correo: emailColaborador,}])
       //un console.log para chequear ;)
@@ -25,7 +30,8 @@ const [emailColaborador, setEmailColaborador] = useState()
       //limpiamos el input, vaciamos el estado
         setNombreColaborador('')
         setEmailColaborador('')
-  }
+  } 
+    }
 
   //funcion al escribir en el input del formulario
   const capturaInputNombre = (e) => {
@@ -46,8 +52,8 @@ const [emailColaborador, setEmailColaborador] = useState()
         {/* dos inputs y botoón de búsqueda */}
         {/* boton de bootstrap */}
 <form onSubmit={enviarFormulario}>
-        <input type="text" placeholder="Nombre del colaborador"  onChange={capturaInputNombre} />
-        <input type="text" placeholder="Email del colaborador"  onChange={capturaInputCorreo} />
+        <input type="text" placeholder="Nombre del colaborador" onChange={capturaInputNombre} />
+        <input type="text" placeholder="Email del colaborador" onChange={capturaInputCorreo} />
  
         <Button variant="primary" type='submit'>Agregar colaborador</Button>
         </form>
