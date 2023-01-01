@@ -22,7 +22,7 @@ const [valorBuscador, setValorBuscador] = useState("");
     <div className="App">
       <Navbar valorBuscador={valorBuscador} setValorBuscador={setValorBuscador} listaColaboradores={listaColaboradores} setListaColaboradores={setListaColaboradores}/>
       <Main setListaColaboradores={setListaColaboradores} listaColaboradores={listaColaboradores}/>
-      <Listado listaColaboradores={listaColaboradores} valorBuscador={valorBuscador}/>
+      <Listado listaColaboradores={listaColaboradores} valorBuscador={valorBuscador} setListaColaboradores={setListaColaboradores}/>
       
     </div>
   );

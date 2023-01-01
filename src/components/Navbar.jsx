@@ -4,8 +4,11 @@ const Navbar = (props) => {
 
        //funcion de captura del valor del input del buscador
          const capturaBuscador = (e) => {
-                //captura el valor del input
-                props.setValorBuscador(e.target.value)
+                //captura el valor del input depurandolo de espacios en blanco y lo pasa a minusculas
+                props.setValorBuscador(e.target.value.trim().toLowerCase())
+                
+               
+          
                 console.log(props.valorBuscador)
 
 
